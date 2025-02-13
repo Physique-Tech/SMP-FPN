@@ -43,9 +43,28 @@
         </form>
     </section>
 
-    <section>
-        <h2 id="Contact-title">Contact us at: physique-tech@example.com</h2>
-    </section>
+    <form action="https://formsubmit.co/jalalelyandouzi2@gmail.com" method="POST">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">رقم الهاتف:</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <!-- منع التحقق من الكابتشا -->
+        <input type="hidden" name="_captcha" value="false">
+    
+        <!-- إعادة توجيه بعد الإرسال -->
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+    
+        <button type="submit">تسجيل</button>
+    </form>
+
+    <footer>
+        <p id="footer">Contact us at: physique-tech@example.com</p>
+    </footer>
 
     <script src="java.script.js"></script>
 </body>
