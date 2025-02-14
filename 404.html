@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="language-selector">
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('fr')">Français</button>
-        <button onclick="changeLanguage('ar')">العربية</button>
-    </div>
-
     <header>
+        <div class="logo">
+            <img src="../AAAA/img/LOGO LEFT.png" alt="Event 1">
+        </div>
+
+    
         <h1 id="title">Welcome to Physique-Tech Club</h1>
     </header>
+
+    <div class="language-selector">
+        <a id="en-btn" href="#" onclick="changeLanguage('en')" style="margin: 5px; text-decoration:solid; color: black;">English</a>
+        <a id="fr-btn" href="#" onclick="changeLanguage('fr')" style="margin: 5px; text-decoration:solid; color: black;">Français</a>
+        <a id="ar-btn" href="#" onclick="changeLanguage('ar')" style="margin: 5px; text-decoration:solid; color: black;">العربية</a>
+    </div>
 
     <section>
         <h2 id="about-title">About Us</h2>
@@ -23,9 +28,24 @@
 
             Join us on our journey to explore the world of physics and technology!</p>
     </section>
-
+   
+    <div class="carousel">
+        <h3 class="carousel-title">News</h3>
+        <div class="slide active">
+            <img src="../AAAA/img/fpn.jpg" alt="Event 1">
+            <p class="caption">This is Event 1</p>
+        </div>
+        <div class="slide active">
+            <img src="../AAAA/img/LOGO.png" alt="Event 2">
+            <p class="caption">Logo officiel du club Physique-Tech</p>
+        </div>
+        <div class="slide active">
+            <img src="../AAAA/img/Faculté-pluridisciplinaire-Nador-fp.jpg" alt="Event 3">
+            <p class="caption">This is Event 3</p>
+        </div>        
+    </div>
     <section>
-        <h2 id="events-title">Upcoming Events</h2>
+        <h3 id="events-title">Upcoming Events</h2>
         <ul id="events-list">
             <li>Physics Workshop - March 2025</li>
             <li>Technology Conference - April 2025</li>
@@ -34,38 +54,29 @@
 
     <section>
         <h2 id="register-title">Register as a Member</h2>
-        <form id="registration-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br><br>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <form action="https://formsubmit.co/jalalelyandouzi2@gmail.com" method="POST">
-        <label for="name">الاسم الكامل:</label>
+    <form action="https://formsubmit.co/el/vevopi" method="POST">
+        <label id="name-title" for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
     
-        <label for="email">البريد الإلكتروني:</label>
+        <label id="email-title" for="email">Email:</label>
         <input type="email" id="email" name="email" required>
     
-        <label for="phone">رقم الهاتف:</label>
+        <label id="phone-title" for="phone">Phone number</label>
         <input type="tel" id="phone" name="phone" required>
     
         <!-- منع التحقق من الكابتشا -->
         <input type="hidden" name="_captcha" value="false">
     
         <!-- إعادة توجيه بعد الإرسال -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+        <input type="hidden" name="_next" value="https://physique-tech.github.io/SMP-FPN/?/thank-you.html">
     
-        <button type="submit">تسجيل</button>
+        <button id="register-button" type="submit">Registration</button>
     </form>
+    </section>
+    <section>
+        <p id="footer">Contact us at: contact.physique.tech@gmail.com </p>
+    </section>
 
-    <footer>
-        <p id="footer">Contact us at: physique-tech@example.com</p>
-    </footer>
-
-    <script src="java.script.js"></script>
+    <script src="main.ini"></script>
 </body>
 </html>
