@@ -90,7 +90,7 @@ h3 {
 .carousel {
     position:relative ;
     width: 50%;
-    max-width: 600px;
+    max-width: 300px;
     margin:auto;
     display: flex;
     overflow: hidden;
