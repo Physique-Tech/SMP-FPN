@@ -89,8 +89,8 @@ h3 {
 
 .carousel {
     position:relative ;
-    max-width: 240px;
-    max-width:400px;
+    max-width: auto;
+    max-height: 450px;
     margin:auto;
     display: flex;
     overflow: hidden;
@@ -109,8 +109,8 @@ h3 {
 }
 
 .slide img {
-    max-width: 800px;
-    max-height:350px;
+    max-width: auto;
+    max-height:425px;
     border-radius: 0px;
 }
 
