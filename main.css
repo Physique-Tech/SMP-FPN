@@ -73,14 +73,15 @@ p {
 h3 {
     font-size: bold;
     text-align: left;
-    color: #000000
+    color: #000000;
+    font-size: 24px;
 }
 
 .carousel-title{
     position: absolute;
     top: -40px;
     left: 16%;
-    transform: translate(-50%);
+    transform: translate(-25px);
     font-size: 40px;
     color: #000000;
     padding: 0px;
