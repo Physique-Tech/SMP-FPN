@@ -29,21 +29,24 @@
             Join us on our journey to explore the world of physics and technology!</p>
     </section>
    
-    <div class="carousel">
-        <h3 class="carousel-title">News</h3>
-        <div class="slide active">
-            <img src="../AAAA/img/fpn.jpg" alt="Event 1">
-            <p class="caption">This is Event 1</p>
+    <section>
+        <div class="carousel">
+            <h3 id="carousel-title"  class="carousel-title">News</h3>
+            <div class="slide active">
+                <img src="../AAAA/img/fpn.jpg" alt="Event 1">
+                <p id="Event1" class="caption">This is Event 1</p>
+            </div>
+            <div class="slide active">
+                <img src="../AAAA/img/LOGO.png" alt="Event 2">
+                <p id="Event2" class="caption">This is Event 2</p>
+            </div>
+            <div class="slide active">
+                <img src="../AAAA/img/Faculté-pluridisciplinaire-Nador-fp.jpg" alt="Event 3">
+                <p id="Event3" class="caption">This is Event 3</p>
+            </div>        
         </div>
-        <div class="slide active">
-            <img src="../AAAA/img/LOGO.png" alt="Event 2">
-            <p class="caption">Logo officiel du club Physique-Tech</p>
-        </div>
-        <div class="slide active">
-            <img src="../AAAA/img/Faculté-pluridisciplinaire-Nador-fp.jpg" alt="Event 3">
-            <p class="caption">This is Event 3</p>
-        </div>        
-    </div>
+    </section>
+
     <section>
         <h3 id="events-title">Upcoming Events</h2>
         <ul id="events-list">
@@ -54,27 +57,12 @@
 
     <section>
         <h2 id="register-title">Register as a Member</h2>
-    <form action="https://formsubmit.co/el/vevopi" method="POST">
-        <label id="name-title" for="name">Full Name</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label id="email-title" for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label id="phone-title" for="phone">Phone number</label>
-        <input type="tel" id="phone" name="phone" required>
-    
-        <!-- منع التحقق من الكابتشا -->
-        <input type="hidden" name="_captcha" value="false">
-    
-        <!-- إعادة توجيه بعد الإرسال -->
-        <input type="hidden" name="_next" value="https://physique-tech.github.io/SMP-FPN/?/thank-you.html">
-    
-        <button id="register-button" type="submit">Registration</button>
-    </form>
+        <a  id="button" href="https://formsubmit.co/el/vevopi" class="button"> Register now </a>
+
     </section>
+
     <section>
-        <p id="footer">Contact us at: contact.physique.tech@gmail.com </p>
+        <p id="footer"> Contact us at: contact.physique.tech@gmail.com </p>
     </section>
 
     <script src="main.ini"></script>
