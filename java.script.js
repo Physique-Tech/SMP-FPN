@@ -1,4 +1,4 @@
-const content = {
+const translations = {
     en: {
         title: "Welcome to Physique-Tech Club",
         aboutTitle: "About Us",
@@ -6,7 +6,12 @@ const content = {
         eventsTitle: "Upcoming Events",
         eventsList: ["Physics Workshop - March 2025", "Technology Conference - April 2025"],
         registerTitle: "Register as a Member",
-        footer: "Contact us at: physique-tech@example.com"
+        nameTitle:"Full Name",
+        emailTitle:"Email",
+        phoneTitle:"Phone number",
+        registerTitle:"Registration",
+        footer: "Contact us at: contact.physique.tech@gmail.com",
+        carouselTitle:"News",
     },
     fr: {
         title: "Bienvenue au club Physique-Tech",
@@ -15,7 +20,12 @@ const content = {
         eventsTitle: "Événements à venir",
         eventsList: ["Atelier de physique - Mars 2025", "Conférence de technologie - Avril 2025"],
         registerTitle: "Inscrivez-vous en tant que membre",
-        footer: "Contactez-nous à: physique-tech@example.com"
+        nameTitle:"Nom et prénom",
+        emailTitle:"Email",
+        phoneTitle:"Numéro de téléphone",
+        registerTitle:"Inscription",
+        footer: "Contactez-nous à: contact.physique.tech@gmail.com",
+        carouselTitle:"Nouvelles",
     },
     ar: {
         title: "مرحباً بكم في نادي فيزيك-تك",
@@ -24,24 +34,53 @@ const content = {
         eventsTitle: "الفعاليات القادمة",
         eventsList: ["ورشة عمل فيزياء - مارس 2025", "مؤتمر التكنولوجيا - أبريل 2025"],
         registerTitle: "سجل كعضو",
-        footer: "اتصل بنا على: physique-tech@example.com"
+        nameTitle:"الاسم الكامل",
+        emailTitle:"البريد الإلكتروني",
+        phoneTitle:"رقم الهاتف", 
+        registerTitle:"تسجيل",       
+        footer: "اتصل بنا على: contact.physique.tech@gmail.com",
+        carouselTitle:"الأخبار",
     }
 };
 
 function changeLanguage(language) {
-    document.getElementById("title").innerText = content[language].title;
-    document.getElementById("about-title").innerText = content[language].aboutTitle;
-    document.getElementById("about-description").innerText = content[language].aboutDescription;
-    document.getElementById("events-title").innerText = content[language].eventsTitle;
+    document.getElementById("title").innerText = translations[language].title;
+    document.getElementById("about-title").innerText = translations[language].aboutTitle;
+    document.getElementById("about-description").innerText = translations[language].aboutDescription;
+    document.getElementById("events-title").innerText = translations[language].eventsTitle;
     
     const eventsList = document.getElementById("events-list");
     eventsList.innerHTML = '';
-    content[language].eventsList.forEach(event => {
+    translations[language].eventsList.forEach(event => {
         const li = document.createElement("li");
         li.textContent = event;
         eventsList.appendChild(li);
     });
 
-    document.getElementById("register-title").innerText = content[language].registerTitle;
-    document.getElementById("footer").innerText = content[language].footer;
+    document.getElementById("register-title").innerText = translations[language].registerTitle;
+    document.getElementById("name-title").innerText = translations[language].nameTitle;
+    document.getElementById("email-title").innerText = translations[language].emailTitle;
+    document.getElementById("phone-title").innerText = translations[language].phoneTitle;
+    document.getElementById("footer").innerText = translations[language].footer;
+    document.getElementById("register-button").innerText = translations[language].registerTitle;
+    document.getElementById("carousel-title").textContent = translations[language];
 }
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach(slide => slide.style.display = "none");
+    slides[index].style.display = "block";
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+// عرض الصورة الأولى عند تحميل الصفحة
+showSlide(currentIndex);
+
+// تغيير الصورة كل 5 ثوانٍ
+setInterval(nextSlide, 5000);
