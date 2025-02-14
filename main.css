@@ -89,13 +89,13 @@ h3 {
 
 .carousel {
     position:relative ;
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 170px;
     margin:auto;
     display: flex;
     overflow: hidden;
-    background: rgb(73, 73, 73);
-    padding: 50px 80px;
+    background: rgb(182 157 157);
+    padding: 50px 100px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
@@ -109,9 +109,10 @@ h3 {
 }
 
 .slide img {
-    width: 100%;
+    width: 200%;
     height: 100%;
     border-radius: 0px;
+    transform: translateX(85px);
 }
 
 .caption {
